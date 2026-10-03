@@ -1,5 +1,5 @@
 import { SignJWT, jwtVerify } from "jose";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import bcrypt from "bcryptjs";
 import type { Role } from "./roles";
 
@@ -43,11 +43,18 @@ export async function verifySessionToken(token: string): Promise<SessionPayload 
   }
 }
 
+async function isRequestHttps(): Promise<boolean> {
+  const h = await headers();
+  // Sau Cloudflare Tunnel (domain chính thức): header này = "https".
+  // Tầng 1 qua Tailscale/LAN luôn là HTTP thuần, không có header này.
+  return h.get("x-forwarded-proto") === "https";
+}
+
 export async function setSessionCookie(token: string) {
   const store = await cookies();
   store.set(COOKIE_NAME, token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
+    secure: await isRequestHttps(),
     sameSite: "lax",
     path: "/",
     maxAge: SESSION_TTL_SECONDS,
