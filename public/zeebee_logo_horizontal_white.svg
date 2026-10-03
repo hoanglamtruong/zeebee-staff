@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 600" width="2400" height="600">
+  <defs>
+    <linearGradient id="goldBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5D157" />
+      <stop offset="100%" stop-color="#EABD17" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left: Shield Emblem -->
+  <image href="/media/zang/4d12540c-53cc-1a49-b5b0-adc64393d806/Picture/Zeebee/brand_set/logos/zeebee_icon_512.png" x="60" y="44" width="512" height="512" />
+
+  <!-- Right: Typography Group -->
+  <g transform="translate(640, 0)">
+    <!-- Brand Name: ZEE BEE -->
+    <text x="0" y="270"
+          font-family="system-ui, -apple-system, 'Montserrat', 'Inter', sans-serif"
+          font-weight="900"
+          font-size="190"
+          letter-spacing="-2"
+          fill="#FEFEFE">ZEE BEE</text>
+
+    <!-- Tag Badge: ADS -->
+    <rect x="880" y="130" width="180" height="76" rx="18" fill="url(#goldBadge)" />
+    <text x="970" y="185"
+          font-family="system-ui, -apple-system, sans-serif"
+          font-weight="900"
+          font-size="46"
+          letter-spacing="2"
+          fill="#0A2D47"
+          text-anchor="middle">ADS</text>
+
+    <!-- Slogan: Sáng Tạo • Tối Ưu -->
+    <text x="10" y="410"
+          font-family="Noto Serif, Liberation Serif, DejaVu Serif, serif"
+          font-weight="bold"
+          font-size="78"
+          letter-spacing="4"
+          fill="#EABD17">SÁNG TẠO <tspan fill="#FEFEFE">•</tspan> TỐI ƯU</text>
+
+    <!-- Agency / Brand credit -->
+    <text x="12" y="490"
+          font-family="system-ui, -apple-system, sans-serif"
+          font-weight="600"
+          font-size="34"
+          letter-spacing="2"
+          fill="#FEFEFE"
+          opacity="0.8">CREATIVE &amp; PERFORMANCE ADVERTISING • ZEEBEE.VN</text>
+  </g>
+</svg>

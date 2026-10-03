@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --zb-navy-dark: #0a2d47;
+  --zb-navy-light: #12406a;
+  --zb-gold: #eabd17;
+  --zb-gold-light: #f5d157;
+  --zb-orange: #fb8500;
+  --zb-white: #ffffff;
+  --zb-off-white: #f8fafc;
+  --zb-muted: #94a3b8;
+}
+
+body {
+  background-color: var(--zb-navy-dark);
+  color: var(--zb-white);
+  font-family: "Be Vietnam Pro", "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+.zb-card {
+  background-color: var(--zb-navy-light);
+  border: 1px solid rgba(234, 189, 23, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(10, 45, 71, 0.5);
+}
+
+.zb-btn-primary {
+  background-color: var(--zb-gold);
+  color: var(--zb-navy-dark);
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.15s ease-in-out;
+}
+
+.zb-btn-primary:hover {
+  background-color: var(--zb-gold-light);
+}
+
+.zb-input {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: var(--zb-white);
+}
+
+.zb-input:focus {
+  outline: none;
+  border-color: var(--zb-gold);
+}
