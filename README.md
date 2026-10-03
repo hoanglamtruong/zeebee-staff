@@ -1,4 +1,4 @@
-# Zeebee Portal
+# Zeebee Staff
 
 Cổng đăng nhập nội bộ dùng chung cho toàn bộ nhân viên hệ sinh thái Zeebee
 (Bán hàng, Marketing, Tài chính, Sản xuất, Vận hành, Nhân sự, CEO).
@@ -27,7 +27,7 @@ Domain chính thức: `https://zeebee.vn` / `https://www.zeebee.vn`
   bằng `bcryptjs`
 - Lưu trữ: SQLite qua `node:sqlite` (built-in Node 22+, không cần build
   native) — file `data/portal.db`, mount qua Docker named volume
-  `zeebee-portal-data` (theo đúng mẫu đã dùng ở `zqr`)
+  `zeebee-staff-data` (theo đúng mẫu đã dùng ở `zqr`)
 
 ## Cấu trúc thư mục
 
@@ -64,7 +64,7 @@ Biến môi trường (xem `.env.example`):
 
 ## Quy ước backup
 
-- Codebase → GitHub (`hoanglamtruong/zeebee-portal`, remote chính thức duy
+- Codebase → GitHub (`hoanglamtruong/zeebee-staff`, remote chính thức duy
   nhất).
 - Không có asset nặng (ảnh/video) ở vòng này nên chưa cần folder Drive
   riêng — sẽ tạo khi vòng sau phát sinh asset.

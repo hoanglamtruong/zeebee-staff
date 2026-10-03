@@ -1,8 +1,8 @@
 services:
-  zeebee-portal-app:
+  zeebee-staff-app:
     build: .
-    image: zeebee-portal-app:latest
-    container_name: zeebee-portal-app
+    image: zeebee-staff-app:latest
+    container_name: zeebee-staff-app
     restart: unless-stopped
     ports:
       - "8129:3000"
@@ -12,7 +12,7 @@ services:
       - ZPORTAL_DB_PATH=/app/data/portal.db
       - ZPORTAL_JWT_SECRET=${ZPORTAL_JWT_SECRET}
     volumes:
-      - zeebee-portal-data:/app/data
+      - zeebee-staff-data:/app/data
     networks:
       - homelab-net
 
@@ -21,4 +21,4 @@ networks:
     external: true
 
 volumes:
-  zeebee-portal-data:
+  zeebee-staff-data:

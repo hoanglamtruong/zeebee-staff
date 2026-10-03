@@ -8,7 +8,7 @@
   Marketing, Tài chính, Sản xuất, Vận hành, Nhân sự, CEO) thay thế vai trò
   domain gốc `zeebee.vn`/`www.zeebee.vn` (trước đây phục vụ cửa hàng Decor).
 - Kết quả: **PASS Tầng 1** (máy CODE — HP EliteBook, Docker container
-  `zeebee-portal-app`, port 8129, qua Tailscale `http://100.82.135.18:8129`).
+  `zeebee-staff-app`, port 8129, qua Tailscale `http://100.82.135.18:8129`).
   Đang chờ Human merge PR + lệnh `/xuatban` cho Tầng 2.
 - Khảo sát hạ tầng trước khi build:
   - Order gốc `ZOS/orders/zeebee-vn-portal.md` brief trỏ tới CHƯA tồn tại →
@@ -41,7 +41,7 @@
   - Đăng ký trùng email → 409 (PASS)
   - Đăng nhập sai mật khẩu → 401 (PASS)
   - Đăng nhập đúng → 200 + cookie mới (PASS)
-  - Restart container → dữ liệu còn nguyên (named volume `zeebee-portal-data`
+  - Restart container → dữ liệu còn nguyên (named volume `zeebee-staff-data`
     hoạt động đúng, PASS)
   - Xác nhận trực quan qua Browser pane (screenshot): trang login, dashboard
     sau đăng nhập, logout — đúng brand Zeebee (Deep Navy/Cyber Gold).
@@ -52,7 +52,7 @@
   thái sạch, chưa có user nào.
 - README: ✅ đã viết tối ưu theo đúng dự án (mô hình nghiệp vụ, tech stack,
   cấu trúc thư mục, lệnh dev/deploy, quy ước backup, việc còn tồn đọng).
-- Backup: ⏳ GitHub — repo `hoanglamtruong/zeebee-portal` sẽ tạo + push khi
+- Backup: ⏳ GitHub — repo `hoanglamtruong/zeebee-staff` sẽ tạo + push khi
   mở PR (sau khi Human xác nhận qua Tailscale). Chưa có asset nặng nên chưa
   cần folder Drive riêng ở vòng này.
 - Quyết định override (rule [9]): không có — chưa Stop Rule nào lặp lại.
