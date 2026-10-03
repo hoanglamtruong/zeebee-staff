@@ -1,0 +1,24 @@
+services:
+  zeebee-portal-app:
+    build: .
+    image: zeebee-portal-app:latest
+    container_name: zeebee-portal-app
+    restart: unless-stopped
+    ports:
+      - "8129:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - ZPORTAL_DB_PATH=/app/data/portal.db
+      - ZPORTAL_JWT_SECRET=${ZPORTAL_JWT_SECRET}
+    volumes:
+      - zeebee-portal-data:/app/data
+    networks:
+      - homelab-net
+
+networks:
+  homelab-net:
+    external: true
+
+volumes:
+  zeebee-portal-data:
